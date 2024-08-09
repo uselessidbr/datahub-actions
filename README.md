@@ -86,45 +86,45 @@ The second strategy is ideal because, initially, it will allow for a sustainable
 
 Run the following commands:
 ```
-git clone http://git.intranet.ciasc.gov.br/devops/datahub.git .
+git clone https://github.com/uselessidbr/datahub-actions.git .
 cd datahub/datahub-actions/v0.0.15
 docker build -t sasl .
 ```
 
-##### Alterando a tag para realizar o push
+##### Changing the tag
 
-Execute o comando:
+Run the command:
 ```
 docker tag sasl:latest docker.io/gvoliveira/datahub-actions-sasl:v0.0.15
 ```
 
-##### Realizando o push para o repositório 
+##### Pushing to a new repository 
 
-Execute o comando: 
+Run the commando: 
 ```
 docker push gvoliveira/datahub-actions-sasl:v0.0.15
 ```
 
-#### Estratégia 2
+#### Strategy 2
 
-Executar os  comandos:
+Run the following commands:
 ```
-git clone http://git.intranet.ciasc.gov.br/devops/datahub.git .
+git clone https://github.com/uselessidbr/datahub-actions.git .
 cd datahub/datahub-actions
 docker build -t sasl --build-arg ACTIONS_VERSION=v0.0.15 .
 ```
-Obs.: a variável **ACTIONS_VERSION** definirá a versão da imagem a ser importada, neste exemplo "v0.0.15".
+Obs.: the **ACTIONS_VERSION** variable defines the version/tag to be used, it will import the **databub-acitons** original image with the corresponding tah, in this example "v0.0.15".
 
-##### Alterando a tag para realizar o push
+##### Changing the tag a tag 
 
-Execute o comando:
+Run the command:
 ```
 docker tag sasl:latest docker.io/gvoliveira/datahub-actions-gssapi:v0.0.15
 ```
 
-##### Realizando o push para o repositório 
+##### Pushing to a new repository 
 
-Execute o comando: 
+Run the command: 
 ```
 docker push gvoliveira/datahub-actions-gssapi:v0.0.15
 ```
