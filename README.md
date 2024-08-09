@@ -93,8 +93,12 @@ The second strategy is ideal because, initially, it will allow for a sustainable
 
 Run the following commands:
 ```
-git clone https://github.com/uselessidbr/datahub-actions.git .
-cd datahub/datahub-actions/v0.0.15
+mkdir datahub
+git clone https://github.com/acryldata/datahub-actions.git .
+git clone https://github.com/uselessidbr/datahub-actions.git datahub/
+cd datahub-actions
+git checkout v0.0.15
+cp ../datahub/datahub-actions/v0.0.15/Dockerfile .
 docker build -t sasl .
 ```
 
