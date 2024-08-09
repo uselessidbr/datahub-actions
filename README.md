@@ -14,7 +14,7 @@ Additionally you will need to include within the HELM "values", under the "datah
 ```
   extraEnvs:
   - name: KAFKA_BOOTSTRAP_SERVER
-    value: lnciasc-boavistaprod130.intranet.ciasc.gov.br:9093,lnciasc-boavistaprod131.intranet.ciasc.gov.br:9093,lnciasc-boavistaprod132.intranet.ciasc.gov.br:9093
+    value: server1:9093,server2:9093,server3:9093
   - name: KAFKA_PROPERTIES_SASL_KERBEROS_SERVICE_NAME
     value: kafka
   - name: KAFKA_PROPERTIES_SECURITY_PROTOCOL
@@ -66,7 +66,7 @@ Additionally you will need to include within the HELM "values", under the "datah
     secret:
       secretName: kafka-ca-cert
   image:
-    repository: docker.io/gvoliveira/datahub-actions-sasl-gssapi
+    repository: docker.io/gvoliveira/datahub-actions-gssapi
     tag: v0.0.15
   resources:
     limits:
