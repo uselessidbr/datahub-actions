@@ -68,6 +68,13 @@ Additionally you will need to include within the HELM "values", under the "datah
   image:
     repository: docker.io/gvoliveira/datahub-actions-sasl-gssapi
     tag: v0.0.15
+  resources:
+    limits:
+      cpu: 1
+      memory: 1Gi
+    requests:
+      cpu: 300m
+      memory: 256Mi
 ```
 ### Create the image with SASL suppoirt
 
