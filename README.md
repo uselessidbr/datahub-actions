@@ -113,7 +113,7 @@ git clone https://github.com/uselessidbr/datahub-actions.git .
 cd datahub/datahub-actions
 docker build -t sasl --build-arg ACTIONS_VERSION=v0.0.15 .
 ```
-Obs.: the **ACTIONS_VERSION** variable defines the version/tag to be used, it will import the **databub-acitons** original image with the corresponding tah, in this example "v0.0.15".
+Obs.: the **ACTIONS_VERSION** variable defines the version/tag to be used, it will import the **databub-acitons** original image with the corresponding tag, in this example "v0.0.15".
 
 ##### Changing the tag a tag 
 
